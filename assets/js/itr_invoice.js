@@ -1,13 +1,13 @@
-$(document).ready(function(){
+jQuery(document).ready(function($){
      	//var i=1;
-    $("#itrinvadd_row").click(function()
+    jQuery("#itrinvadd_row").click(function()
  
  	   {
  	   	//var i=1;	
     	//b=i-1;
- 	   	var i = $('.invtbody tr').length;
+ 	   	var i = jQuery('.invtbody tr').length;
  	   	
-    	$("#itrinvtab_logic tbody").append('<tr id="itrinvaddr'+i+'" class="invgriditems" invitemindex="'+i+'">' +
+    	jQuery("#itrinvtab_logic tbody").append('<tr id="itrinvaddr'+i+'" class="invgriditems" invitemindex="'+i+'">' +
               /*'<td>'+i+'</td>'+*/
           '<td><input type="text" name="invproduct[]" id="invproduct'+i+'" placeholder="Enter Product Name" class="form-control"/></td>'+
 
@@ -29,18 +29,18 @@ $(document).ready(function(){
 		itrinvcalc();
 	});*/
 
-  $("#itrinvdelete_row").click(function(){
-    var i = $('.invtbody tr').length; // get the number of rows in the table
+  jQuery("#itrinvdelete_row").click(function(){
+    var i = jQuery('.invtbody tr').length; // get the number of rows in the table
     //console.log(i); // print the number of rows to the console
     if (i > 1) { // if there is more than 1 row
-    	$('.invtbody tr:last').remove(); // remove the last row
+    	jQuery('.invtbody tr:last').remove(); // remove the last row
         //$("#itrinvaddr" + (i-1)).html(''); // delete the last row
         //i--; // decrement the row count
     }
     itrinvcalc(); // calculate the total
 });
 	
-	$('#itrinvtab_logic tbody').on('keyup change',function(){
+	jQuery('#itrinvtab_logic tbody').on('keyup change',function(){
 		itrinvcalc();
 	});
 
@@ -51,19 +51,19 @@ function itrinvcalc()
 {
 	var grandtotal = 0;
 	//var abc = jQuery.noConflict();
-	$('#itrinvtab_logic tbody tr').each(function(i, element) {
+	jQuery('#itrinvtab_logic tbody tr').each(function(i, element) {
 	//$('.invtbody').each(function(i, element) {
-		var html = $(this).html();
+		var html = jQuery(this).html();
 		if(html!='')
 		{
-			var qty = $(this).find('.qty').val();
-			var price = $(this).find('.price').val();
-			$(this).find('.total').val(qty*price);
+			var qty = jQuery(this).find('.qty').val();
+			var price = jQuery(this).find('.price').val();
+			jQuery(this).find('.total').val(qty*price);
 			grandtotal = grandtotal + (qty*price);
 			
 		}
 	});
-		$('#invsub_total').val(grandtotal);
+		jQuery('#invsub_total').val(grandtotal);
 
 
 }

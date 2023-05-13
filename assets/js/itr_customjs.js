@@ -1,4 +1,4 @@
-   jQuery(".entry-content").append('<div id="processingdiv" class="processing"><div class="processingdiv"></div></div>'); 
+//jQuery(".entry-content").append('<div id="processingdiv" class="processing"><div class="processingdiv"></div></div>'); 
 
       let ajax_url = ajax_object.ajax_url;
 
@@ -14,62 +14,63 @@
 
 
 
+
       /*==== Shipping Address checkbox =======*/   
 
-      $('#shaddress').prop('disabled',true);
-      $('#shcity').prop('disabled',true);
-      $('#shstate').prop('disabled',true);
-      $('#shpostalcode').prop('disabled',true);
-      $('#shcountry').prop('disabled',true);
+      jQuery('#shaddress').prop('disabled',true);
+      jQuery('#shcity').prop('disabled',true);
+      jQuery('#shstate').prop('disabled',true);
+      jQuery('#shpostalcode').prop('disabled',true);
+      jQuery('#shcountry').prop('disabled',true);
 
-      $('#ongoing').change(function() {
+      jQuery('#ongoing').change(function() {
 
         if(this.checked) {
-          $('#shaddress').prop('disabled',true);
-          $('#shcity').prop('disabled',true);
-          $('#shstate').prop('disabled',true);
-          $('#shpostalcode').prop('disabled',true);
-          $('#shcountry').prop('disabled',true);
+          jQuery('#shaddress').prop('disabled',true);
+          jQuery('#shcity').prop('disabled',true);
+          jQuery('#shstate').prop('disabled',true);
+          jQuery('#shpostalcode').prop('disabled',true);
+          jQuery('#shcountry').prop('disabled',true);
 
 
         } else {
-          $('#shaddress').prop('disabled',false);
-          $('#shcity').prop('disabled',false);
-          $('#shstate').prop('disabled',false);
-          $('#shpostalcode').prop('disabled',false);
-          $('#shcountry').prop('disabled',false);
+          jQuery('#shaddress').prop('disabled',false);
+          jQuery('#shcity').prop('disabled',false);
+          jQuery('#shstate').prop('disabled',false);
+          jQuery('#shpostalcode').prop('disabled',false);
+          jQuery('#shcountry').prop('disabled',false);
         }
       });
 
 
       /*==== Shipping Address to billing Address Copy =======*/ 
 
-      $(document).ready(function() {
-        $("#processingdiv").css({'visibility':'hidden'});
+      jQuery(document).ready(function() {
+        jQuery("#processingdiv").css({'visibility':'hidden'});
 
-        $('#baddress').keyup(function() {
+        jQuery('#baddress').keyup(function() {
           var address = $(this).val(); 
-          $('#shaddress').val(address);
+          jQuery('#shaddress').val(address);
         });
 
-        $('#bcity').keyup(function() {
+        jQuery('#bcity').keyup(function() {
           var city = $(this).val(); 
-          $('#shcity').val(city);
+          jQuery('#shcity').val(city);
         });
 
-        $('#bstate').keyup(function() {
+        jQuery('#bstate').keyup(function() {
           var bstate = $(this).val(); 
-          $('#shstate').val(bstate);
+          jQuery('#shstate').val(bstate);
         });
 
-        $('#bpostalcode').keyup(function() {
+        jQuery('#bpostalcode').keyup(function() {
           var zipcode = $(this).val(); 
-          $('#shpostalcode').val(zipcode);
+          jQuery('#shpostalcode').val(zipcode);
         });
 
-        $('#bcountry').keyup(function() {
+        jQuery('#bcountry').keyup(function() {
           var country = $(this).val(); 
-          $('#shcountry').val(country);
+          jQuery('#shcountry').val(country);
         });
       });
 
@@ -154,7 +155,7 @@
           },
           beforeSend:function(){
            jQuery('#valida_error_message').text('');
-           $(".entry-content #processingdiv").css({'visibility':'visible'});
+           jQuery(".entry-content #processingdiv").css({'visibility':'visible'});
           },
 
           success:function(data) {
@@ -177,7 +178,7 @@
         },
         complete: function(){
         setTimeout(function() {
-          $("#processingdiv").css({'visibility':'hidden'});
+          jQuery("#processingdiv").css({'visibility':'hidden'});
         }, 1000);
       }
 
@@ -248,7 +249,7 @@
 
     jQuery(document).on('click', '#custdel', function() {
 
-     var id = $(this).data('id');
+     var id = jQuery(this).data('id');
      var confirmMessage = 'Are you sure you want to delete this Customer Information?';
      if (confirm(confirmMessage)) {
       jQuery.ajax({
@@ -355,16 +356,16 @@
 
         var detaillist = [];
 
-        $('.griditems').each(function () {
+        jQuery('.griditems').each(function () {
 
-          var iindex = $(this).attr('itemindex');
-          var product = $("#product"+iindex).val();
-          var itr_customer = $("#itr_customer").val();
-          var estmateno = $("#estmateno").val();
-          var description = $("#description"+iindex).val();
-          var qty = $("#qty"+iindex).val();
-          var price = $("#price"+iindex).val();
-          var total = $("#total"+iindex).val();
+          var iindex = jQuery(this).attr('itemindex');
+          var product = jQuery("#product"+iindex).val();
+          var itr_customer = jQuery("#itr_customer").val();
+          var estmateno = jQuery("#estmateno").val();
+          var description = jQuery("#description"+iindex).val();
+          var qty = jQuery("#qty"+iindex).val();
+          var price = jQuery("#price"+iindex).val();
+          var total = jQuery("#total"+iindex).val();
 
           detaillist.push({
             'product': product,
@@ -416,7 +417,7 @@
 
           beforeSend:function(){
            jQuery('#error_message').text('');
-             $(".entry-content #processingdiv").css({'visibility':'visible'});
+             jQuery(".entry-content #processingdiv").css({'visibility':'visible'});
           },
 
           success:function(data) {
@@ -437,7 +438,7 @@
         },
         complete: function(){
         setTimeout(function() {
-          $("#processingdiv").css({'visibility':'hidden'});
+          jQuery("#processingdiv").css({'visibility':'hidden'});
         }, 6000);
       },
         error: function(errorThrown){
@@ -779,16 +780,16 @@
 
         var invoiclist = [];
 
-        $('.invgriditems').each(function () {
+        jQuery('.invgriditems').each(function () {
 
           var index = $(this).attr('invitemindex');
-          var invproduct = $("#invproduct"+index).val();
-          var inv_custid = $("#inv_custid").val();
-          var inv_esti_number = $("#inv_esti_number").val();
-          var invdescription = $("#invdescription"+index).val();
-          var invqty = $("#invqty"+index).val();
-          var invprice = $("#invprice"+index).val();
-          var invtotal = $("#invtotal"+index).val();
+          var invproduct = jQuery("#invproduct"+index).val();
+          var inv_custid = jQuery("#inv_custid").val();
+          var inv_esti_number = jQuery("#inv_esti_number").val();
+          var invdescription = jQuery("#invdescription"+index).val();
+          var invqty = jQuery("#invqty"+index).val();
+          var invprice = jQuery("#invprice"+index).val();
+          var invtotal = jQuery("#invtotal"+index).val();
 
           invoiclist.push({
             'invproduct': invproduct,
@@ -835,7 +836,7 @@
 
           beforeSend:function(){
            jQuery('#invalid_message').text('');
-           $(".entry-content #processingdiv").css({'visibility':'visible'});
+           jQuery(".entry-content #processingdiv").css({'visibility':'visible'});
           },
 
           success:function(data) {
@@ -1088,18 +1089,18 @@
 
     /* ===== Payment equality check ====== */
 
-      jQuery(document).ready(function() {
+      jQuery(document).ready(function($) {
 
-       $('#itr_apply_amt').on('keypress', function(event) {
+       jQuery('#itr_apply_amt').on('keypress', function(event) {
         if (event.which < 48 || event.which > 57) {
           event.preventDefault();
-          $(this).val('');
+          jQuery(this).val('');
         }
       });
 
        jQuery('#itr_apply_amt').keyup(function() { 
-        var numberDiv = parseFloat($('#orginal_amount').text());
-        var numberInput = parseFloat($('#itr_apply_amt').val());
+        var numberDiv = parseFloat(jQuery('#orginal_amount').text());
+        var numberInput = parseFloat(jQuery('#itr_apply_amt').val());
 
         if (numberInput > numberDiv) {
           jQuery(this).val('');
@@ -1175,7 +1176,7 @@
           },
           beforeSend:function(){
             jQuery('#perror_message').text('');
-            $(".entry-content #processingdiv").css({'visibility':'visible'});
+            jQuery(".entry-content #processingdiv").css({'visibility':'visible'});
          },
 
           success:function(data) {
@@ -1197,7 +1198,7 @@
         },
          complete: function(){
         setTimeout(function() {
-          $("#processingdiv").css({'visibility':'hidden'});
+          jQuery("#processingdiv").css({'visibility':'hidden'});
         }, 6000);
       },
         error: function(errorThrown){
@@ -1333,27 +1334,59 @@
 
 
 
-  $(document).ready(function() {
-      $('.adcutomer').hide(200);
-      $('.estimate').hide(200);
-      $('.invoice').hide(200);
-      $('.recieve').hide(200);
-      $('.customerlist').hide(200);
-      $('.estimatelist').hide(200);
-      $('.invoicelist').hide(200);
-      $('.paymentlist').hide(200);
-      $('.overduelist').hide(200);
-
-    $('#mcustomerlist').click(function() {
-      console.log('customer');
-      $('.adcutomer').hide(200);
-      $('.estimate').hide(200);
-      $('.invoice').hide(200);
-      $('.recieve').hide(200);
-      $('.customerlist').show(200);
-      $('.estimatelist').hide(200);
-      $('.invoicelist').hide(200);
-      $('.paymentlist').hide(200);
-      $('.overduelist').hide(200);
+ jQuery(document).ready(function() {
+    console.log('ddd');
+     jQuery("#mrecieve").on("click", function() { 
+      console.log('sss');
+      jQuery('.adcutomer').hide(200);
+      jQuery('.estimate').hide(200);
+      jQuery('.invoice').hide(200);
+      jQuery('.itr_payrecieve').show(200);
+      jQuery('.customerlist').hide(200);
+      jQuery('.estimatelist').hide(200);
+      jQuery('.invoicelist').hide(200);
+      jQuery('.paymentlist').hide(200);
+      jQuery('.overduelist').hide(200);
     });
-   });
+
+    jQuery('#adcutomer').click(function() {
+      jQuery('.adcutomer').show(200);
+      jQuery('.estimate').hide(200);
+      jQuery('.invoice').hide(200);
+      jQuery('.itr_payrecieve').hide(200);
+      jQuery('.customerlist').hide(200);
+      jQuery('.estimatelist').hide(200);
+      jQuery('.invoicelist').hide(200);
+      jQuery('.paymentlist').hide(200);
+      jQuery('.overduelist').hide(200);
+     });
+
+    jQuery('#mestimate').click(function() {
+
+      jQuery('.adcutomer').hide(200);
+      jQuery('.estimate').show(200);
+      jQuery('.invoice').hide(200);
+      jQuery('.itr_payrecieve').hide(200);
+      jQuery('.customerlist').hide(200);
+      jQuery('.estimatelist').hide(200);
+      jQuery('.invoicelist').hide(200);
+      jQuery('.paymentlist').hide(200);
+      jQuery('.overduelist').hide(200);
+    });
+
+    jQuery('#invoice').click(function() {
+
+      jQuery('.adcutomer').hide(200);
+      jQuery('.estimate').hide(200);
+      jQuery('.invoice').show(200);
+      jQuery('.itr_payrecieve').hide(200);
+      jQuery('.customerlist').hide(200);
+      jQuery('.estimatelist').hide(200);
+      jQuery('.invoicelist').hide(200);
+      jQuery('.paymentlist').hide(200);
+      jQuery('.overduelist').hide(200);
+    });
+
+   //jQuery('#mrecieve').click(function() {
+   
+});

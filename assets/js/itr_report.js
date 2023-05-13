@@ -127,7 +127,7 @@ let ajaxurl = ajax_obj.ajaxurl;
 
   jQuery(document).on('click', '#custshow', function() {
 
-   var id = $(this).data('id');
+   var id = jQuery(this).data('id');
    console.log(id);
 
     jQuery.ajax({
@@ -268,194 +268,138 @@ let ajaxurl = ajax_obj.ajaxurl;
       }); 
     }); 
 
+  
+   
 
-/*==== Drawer Menu Icon  =======*/ 
+  /*jQuery(document).ready(function() {
+      jQuery('.adcutomer').hide(200);
+      jQuery('.estimate').hide(200);
+      jQuery('.invoice').hide(200);
+      jQuery('.recieve').hide(200);
+      jQuery('.customerlist').hide(200);
+      jQuery('.estimatelist').hide(200);
+      jQuery('.invoicelist').hide(200);
+      jQuery('.paymentlist').hide(200);
+      jQuery('.overduelist').hide(200);
 
+    jQuery('#mcustomerlist').click(function() {
+      console.log('ddd');
+      jQuery('.adcutomer').hide(200);
+      jQuery('.estimate').hide(200);
+      jQuery('.invoice').hide(200);
+      jQuery('.recieve').hide(200);
+      jQuery('.customerlist').show(200);
+      jQuery('.estimatelist').hide(200);
+      jQuery('.invoicelist').hide(200);
+      jQuery('.paymentlist').hide(200);
+      jQuery('.overduelist').hide(200);
+    });
+   });
+
+ jQuery(document).ready(function() {
+      jQuery('.adcutomer').hide(200);
+      jQuery('.estimate').hide(200);
+      jQuery('.invoice').hide(200);
+      jQuery('.recieve').hide(200);
+      jQuery('.customerlist').hide(200);
+      jQuery('.estimatelist').hide(200);
+      jQuery('.invoicelist').hide(200);
+      jQuery('.paymentlist').hide(200);
+      jQuery('.overduelist').hide(200);
+
+    jQuery('#estimatelist').click(function() {
+
+      jQuery('.adcutomer').hide(200);
+      jQuery('.estimate').hide(200);
+      jQuery('.invoice').hide(200);
+      jQuery('.recieve').hide(200);
+      jQuery('.customerlist').hide(200);
+      jQuery('.estimatelist').show(200);
+      jQuery('.invoicelist').hide(200);
+      jQuery('.paymentlist').hide(200);
+      jQuery('.overduelist').hide(200);
+    });
+   });
 
   jQuery(document).ready(function() {
+      jQuery('.adcutomer').hide(200);
+      jQuery('.estimate').hide(200);
+      jQuery('.invoice').hide(200);
+      jQuery('.recieve').hide(200);
+      jQuery('.customerlist').hide(200);
+      jQuery('.estimatelist').hide(200);
+      jQuery('.invoicelist').hide(200);
+      jQuery('.paymentlist').hide(200);
+      jQuery('.overduelist').hide(200);
 
-    $('#adcutomer').click(function() {
-      $('.adcutomer').show(200);
-      $('.estimate').hide(200);
-      $('.invoice').hide(200);
-      $('.itr_payrecieve').show(200);
-      $('.customerlist').hide(200);
-      $('.estimatelist').hide(200);
-      $('.invoicelist').hide(200);
-      $('.paymentlist').hide(200);
-      $('.overduelist').hide(200);
-     });
+    jQuery('#invoicelist').click(function() {
 
-    $('#mestimate').click(function() {
-
-      $('.adcutomer').hide(200);
-      $('.estimate').show(200);
-      $('.invoice').hide(200);
-      $('.itr_payrecieve').hide(200);
-      $('.customerlist').hide(200);
-      $('.estimatelist').hide(200);
-      $('.invoicelist').hide(200);
-      $('.paymentlist').hide(200);
-      $('.overduelist').hide(200);
-    });
-
-    $('#invoice').click(function() {
-
-      $('.adcutomer').hide(200);
-      $('.estimate').hide(200);
-      $('.invoice').show(200);
-      $('.itr_payrecieve').hide(200);
-      $('.customerlist').hide(200);
-      $('.estimatelist').hide(200);
-      $('.invoicelist').hide(200);
-      $('.paymentlist').hide(200);
-      $('.overduelist').hide(200);
-    });
-
-   //$('#mrecieve').click(function() {
-    $("#mrecieve").on("click", function() { 
-      console.log('sss');
-      $('.adcutomer').hide(200);
-      $('.estimate').hide(200);
-      $('.invoice').hide(200);
-      $('.itr_payrecieve').show();
-      $('.customerlist').hide(200);
-      $('.estimatelist').hide(200);
-      $('.invoicelist').hide(200);
-      $('.paymentlist').hide(200);
-      $('.overduelist').hide(200);
-    });
-});
-
-  /*$(document).ready(function() {
-      $('.adcutomer').hide(200);
-      $('.estimate').hide(200);
-      $('.invoice').hide(200);
-      $('.recieve').hide(200);
-      $('.customerlist').hide(200);
-      $('.estimatelist').hide(200);
-      $('.invoicelist').hide(200);
-      $('.paymentlist').hide(200);
-      $('.overduelist').hide(200);
-
-    $('#mcustomerlist').click(function() {
-      console.log('ddd');
-      $('.adcutomer').hide(200);
-      $('.estimate').hide(200);
-      $('.invoice').hide(200);
-      $('.recieve').hide(200);
-      $('.customerlist').show(200);
-      $('.estimatelist').hide(200);
-      $('.invoicelist').hide(200);
-      $('.paymentlist').hide(200);
-      $('.overduelist').hide(200);
-    });
-   });
-
- $(document).ready(function() {
-      $('.adcutomer').hide(200);
-      $('.estimate').hide(200);
-      $('.invoice').hide(200);
-      $('.recieve').hide(200);
-      $('.customerlist').hide(200);
-      $('.estimatelist').hide(200);
-      $('.invoicelist').hide(200);
-      $('.paymentlist').hide(200);
-      $('.overduelist').hide(200);
-
-    $('#estimatelist').click(function() {
-
-      $('.adcutomer').hide(200);
-      $('.estimate').hide(200);
-      $('.invoice').hide(200);
-      $('.recieve').hide(200);
-      $('.customerlist').hide(200);
-      $('.estimatelist').show(200);
-      $('.invoicelist').hide(200);
-      $('.paymentlist').hide(200);
-      $('.overduelist').hide(200);
+      jQuery('.adcutomer').hide(200);
+      jQuery('.estimate').hide(200);
+      jQuery('.invoice').hide(200);
+      jQuery('.recieve').hide(200);
+     jQuery('.customerlist').hide(200);
+      jQuery('.estimatelist').hide(200);
+      jQuery('.invoicelist').show(200);
+      jQuery('.paymentlist').hide(200);
+      jQuery('.overduelist').hide(200);
     });
    });
 
   $(document).ready(function() {
-      $('.adcutomer').hide(200);
-      $('.estimate').hide(200);
-      $('.invoice').hide(200);
-      $('.recieve').hide(200);
-      $('.customerlist').hide(200);
-      $('.estimatelist').hide(200);
-      $('.invoicelist').hide(200);
-      $('.paymentlist').hide(200);
-      $('.overduelist').hide(200);
+      jQuery('.adcutomer').hide(200);
+      jQuery('.estimate').hide(200);
+      jQuery('.invoice').hide(200);
+      jQuery('.recieve').hide(200);
+      jQuery('.customerlist').hide(200);
+      jQuery('.estimatelist').hide(200);
+      jQuery('.invoicelist').hide(200);
+      jQuery('.paymentlist').show(200);
+      jQuery('.overduelist').hide(200);
 
-    $('#invoicelist').click(function() {
+    jQuery('#paymentlist').click(function() {
 
-      $('.adcutomer').hide(200);
-      $('.estimate').hide(200);
-      $('.invoice').hide(200);
-      $('.recieve').hide(200);
-      $('.customerlist').hide(200);
-      $('.estimatelist').hide(200);
-      $('.invoicelist').show(200);
-      $('.paymentlist').hide(200);
-      $('.overduelist').hide(200);
+      jQuery('.adcutomer').hide(200);
+      jQuery('.estimate').hide(200);
+      jQuery('.invoice').hide(200);
+      jQuery('.recieve').hide(200);
+      jQuery('.customerlist').hide(200);
+      jQuery('.estimatelist').hide(200);
+      jQuery('.invoicelist').hide(200);
+      jQuery('.paymentlist').show(200);
+      jQuery('.overduelist').hide(200);
     });
    });
 
-  $(document).ready(function() {
-      $('.adcutomer').hide(200);
-      $('.estimate').hide(200);
-      $('.invoice').hide(200);
-      $('.recieve').hide(200);
-      $('.customerlist').hide(200);
-      $('.estimatelist').hide(200);
-      $('.invoicelist').hide(200);
-      $('.paymentlist').show(200);
-      $('.overduelist').hide(200);
+  jQuery(document).ready(function() {
+      jQuery('.adcutomer').hide(200);
+      jQuery('.estimate').hide(200);
+      jQuery('.invoice').hide(200);
+      jQuery('.recieve').hide(200);
+      jQuery('.customerlist').hide(200);
+      jQuery('.estimatelist').hide(200);
+      jQuery('.invoicelist').hide(200);
+      jQuery('.paymentlist').hide(200);
+      jQuery('.overduelist').hide(200);
 
-    $('#paymentlist').click(function() {
+    jQuery('#overduelist').click(function() {
 
-      $('.adcutomer').hide(200);
-      $('.estimate').hide(200);
-      $('.invoice').hide(200);
-      $('.recieve').hide(200);
-      $('.customerlist').hide(200);
-      $('.estimatelist').hide(200);
-      $('.invoicelist').hide(200);
-      $('.paymentlist').show(200);
-      $('.overduelist').hide(200);
-    });
-   });
-
-  $(document).ready(function() {
-      $('.adcutomer').hide(200);
-      $('.estimate').hide(200);
-      $('.invoice').hide(200);
-      $('.recieve').hide(200);
-      $('.customerlist').hide(200);
-      $('.estimatelist').hide(200);
-      $('.invoicelist').hide(200);
-      $('.paymentlist').hide(200);
-      $('.overduelist').hide(200);
-
-    $('#overduelist').click(function() {
-
-      $('.adcutomer').hide(200);
-      $('.estimate').hide(200);
-      $('.invoice').hide(200);
-      $('.recieve').hide(200);
-      $('.customerlist').hide(200);
-      $('.estimatelist').hide(200);
-      $('.invoicelist').hide(200);
-      $('.paymentlist').hide(200);
-      $('.overduelist').show(200);
+      jQuery('.adcutomer').hide(200);
+      jQuery('.estimate').hide(200);
+      jQuery('.invoice').hide(200);
+      jQuery('.recieve').hide(200);
+      jQuery('.customerlist').hide(200);
+      jQuery('.estimatelist').hide(200);
+      jQuery('.invoicelist').hide(200);
+      jQuery('.paymentlist').hide(200);
+      jQuery('.overduelist').show(200);
     });
    });*/
 
  /* ==== drawer menu ==== */
 
 
-$(document).ready(function() {
+jQuery(document).ready(function() {
     // show sidebar and overlay
     function showSidebar() {
         sidebar.css('margin-left', '0');
@@ -471,13 +415,13 @@ $(document).ready(function() {
 
         overlay.fadeTo('500', 0, function() {
             overlay.hide();
-        });;
+        });
     }
 
     // selectors
-    var sidebar = $('[data-sidebar]');
-    var button = $('[data-sidebar-button]');
-    var overlay = $('[data-sidebar-overlay]');
+    var sidebar = jQuery('[data-sidebar]');
+    var button = jQuery('[data-sidebar-button]');
+    var overlay = jQuery('[data-sidebar-overlay]');
 
     // add height to content area
     overlay.parent().css('min-height', 'inherit');

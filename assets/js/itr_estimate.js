@@ -1,10 +1,10 @@
-$(document).ready(function(){
+jQuery(document).ready(function($){
     var i=1;
-    $("#itradd_row").click(function()
+    jQuery("#itradd_row").click(function()
 
     {
     	//b=i-1;
-    	$("#itrtab_logic tbody").append('<tr id="itraddr'+i+'" class="griditems" itemindex="'+i+'">' +
+    	jQuery("#itrtab_logic tbody").append('<tr id="itraddr'+i+'" class="griditems" itemindex="'+i+'">' +
               /*'<td>'+i+'</td>'+*/
               '<td><input type="text" name="product[]" id="product'+i+'" placeholder="Enter Product Name" class="form-control"/></td>'+
 
@@ -16,31 +16,32 @@ $(document).ready(function(){
       	i++; 
   	});
 
-    $("#itrdelete_row").click(function(){
+    jQuery("#itrdelete_row").click(function(){
     	if(i>1){
-		$("#itraddr"+(i-1)).html('');
+		jQuery("#itraddr"+(i-1)).html('');
 		i--;
 		}
 		itrcalc();
 	});
 	
-	$('#itrtab_logic tbody').on('keyup change',function(){
+	jQuery('#itrtab_logic tbody').on('keyup change',function(){
 		itrcalc();
 	});
 
 
 });
 
+
 function itrcalc()
 {
-	$('#itrtab_logic tbody tr').each(function(i, element) {
-		var html = $(this).html();
+	jQuery('#itrtab_logic tbody tr').each(function(i, element) {
+		var html = jQuery(this).html();
 		if(html!='')
 		{
-			var qty = $(this).find('.qty').val();
-			var price = $(this).find('.price').val();
-			$(this).find('.total').val(qty*price);
-			//$('#total').val(uqtotal.toFixed(2));
+			var qty = jQuery(this).find('.qty').val();
+			var price = jQuery(this).find('.price').val();
+			jQuery(this).find('.total').val(qty*price);
+			//jQuery('#total').val(uqtotal.toFixed(2));
 			itrcalc_total();
 		}
     });
@@ -49,11 +50,11 @@ function itrcalc()
 function itrcalc_total()
 {
 	total=0;
-	$('.total').each(function() {
-        total += parseInt($(this).val());
+	jQuery('.total').each(function() {
+        total += parseInt(jQuery(this).val());
     });
-	$('#sub_total').val(total.toFixed(2));
-	$('#itramount').val(total.toFixed(2));
+	jQuery('#sub_total').val(total.toFixed(2));
+	jQuery('#itramount').val(total.toFixed(2));
 	
 }
 

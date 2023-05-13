@@ -38,8 +38,12 @@ final class itrinvoice
 
   public function invoice_enqueue_assets() {
   
-    wp_enqueue_script( 'jQuery-min', 'https://code.jquery.com/jquery-3.6.0.js', time(), true );
+    wp_enqueue_script( 'jquery', 'https://code.jquery.com/jquery-3.6.0.js', time(), true );
 
+
+    //wp_enqueue_script( 'jQuery-min', 'https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js', time(), true );
+
+    //wp_enqueue_script('jquery');
 
     wp_enqueue_script( 'jQuery-modal', plugins_url('/assets/js/jquery.modal.min.js' , __FILE__ ) , array('jquery'), time(), true);
 
@@ -69,18 +73,16 @@ final class itrinvoice
 
     wp_enqueue_script( 'itrestimate', plugins_url('/assets/js/itr_estimate.js' , __FILE__ ) , array('jquery'), time(), true);
 
-    wp_enqueue_script( 'itrinvoice', plugins_url('/assets/js/itr_invoice.js' , __FILE__ ) , array('jquery'), '1.6.0', true);
+    wp_enqueue_script( 'itrinvoice', plugins_url('/assets/js/itr_invoice.js' , __FILE__ ) , array('jquery'), time(), true);
 
-    wp_enqueue_script( 'customjs', plugins_url('/assets/js/itr_customjs.js' , __FILE__ ) , array('jquery'), '1.3.0', true);
+    wp_enqueue_script( 'customjs', plugins_url('/assets/js/itr_customjs.js' , __FILE__ ) , array('jquery'), time(), true);
 
     wp_localize_script( 'customjs', 'ajax_object', array( 'ajax_url' => admin_url( 'admin-ajax.php' ) ) );
 
 
-    wp_enqueue_script( 'reportjs' , plugins_url('/assets/js/itr_report.js' , __FILE__ ) , array('jquery'), '1.3.0', true);
+    wp_enqueue_script( 'reportjs' , plugins_url('/assets/js/itr_report.js' , __FILE__ ) , array('jquery'), time(), true);
 
     wp_localize_script( 'reportjs', 'ajax_obj', array( 'ajaxurl' => admin_url( 'admin-ajax.php' ) ) );
-
-
 
 }
 

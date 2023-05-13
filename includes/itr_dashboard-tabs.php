@@ -170,7 +170,7 @@ function dokan_get_dashboard_nav() {
                 <li> <a href="#" id="adcutomer" data-sidebar-button>Add Cutomer</a></li>
                 <li> <a href="#" id="mestimate" data-sidebar-button>Estimate</a></li>
                 <li> <a href="#" id="invoice" data-sidebar-button>Invoice</a></li>
-                <li> <a href="#" id="mrecieve" data-sidebar-button >Recieve Payment</a></li>
+                <li> <a href="#" id="mrecieve" data-sidebar-button>Recieve Payment</a></li>
                 <li> <a href="#" id="mcustomerlist" data-sidebar-button>Add Customer List</a></li>
                 <li> <a href="#" id="estimatelist" data-sidebar-button>Total estimate list</a></li>
                 <li> <a href="#" id="invoicelist" data-sidebar-button>Total invoice list</a></li>
@@ -237,38 +237,7 @@ function dokan_get_dashboard_nav() {
 
     </div>  
 
-  <!-- <div class="dropdown mt-3">
-      <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown">
-        Dropdown button
-      </button>
-      <ul class="dropdown-menu">
 
-        <li> <a href="#" id="adcutomer" class="dropdown-item">Add Cutomer</a></li>
-        <li> <a href="#" id="mestimate" class="dropdown-item">Estimate</a></li>
-        <li> <a href="#" id="invoice" class="dropdown-item">Invoice</a></li>
-        <li> <a href="#" id="mrecieve" class="dropdown-item" >Recieve Payment</a></li>
-      </ul>
-    </div>
-
-
-   <div class="adcutomer">                    
-                <?php //echo do_shortcode( '[add_customer]' ); ?>
-                <div class="clear"></div>
-              Built and maintained 
-            </div>
-            <div class="estimate">
-                 <?php //echo do_shortcode( '[itr_estimate]' ); ?>
-                <div class="clear"></div>
-            </div>
-            <div class="invoice">
-                <?php //echo do_shortcode('[itr_invoice]');?>
-                     <div class="clear"></div>
-            </div>
-
-            <div class="itr_payrecieve">
-                <?php //echo do_shortcode('[itr_payment_recive]');?>   
-                     <div class="clear"></div>
-            </div>-->
 
 
 
