@@ -16,7 +16,8 @@ final class itr_customerlist{
 
     public function customer_show_list(){
         ?>
-
+<div class="row"> 
+    
         <h4>Show Customer List</h4> 
         <div id="delmessage"> </div>
         <table id="show_data" class="table table-bordered">
@@ -61,11 +62,19 @@ final class itr_customerlist{
 </table> 
 
 
-<div id="ex1" class="modal">
+    <div id="ex1" class="modal">
 
-  <a href="#" rel="modal:close">Close</a>
+      <a href="#" rel="modal:close">Close</a>
+
+    </div>
+
 
 </div>
+
+<div class="row copyright"> 
+<p>Built and maintained by <a href="https://itrtechsystems.com/">ITR Consulting</a> <strong>(www.itrtechsystems.com)</strong></p>
+
+</div>     
 
 <!-- Link to open the modal -->
 

@@ -438,7 +438,7 @@
         complete: function(){
         setTimeout(function() {
           $("#processingdiv").css({'visibility':'hidden'});
-        }, 7000);
+        }, 6000);
       },
         error: function(errorThrown){
           console.log(errorThrown);
@@ -862,7 +862,7 @@
          complete: function(){
         setTimeout(function() {
           $("#processingdiv").css({'visibility':'hidden'});
-        }, 7000);
+        }, 6000);
       },
         error: function(errorThrown){
           console.log(errorThrown);
@@ -935,8 +935,9 @@
 
           success: function(data) {
             console.log(data);
-           jQuery('#invo_id').empty();
-           jQuery.each(data, function(index, item) {
+            jQuery('#invo_id').empty();
+            jQuery.each(data, function(index, item) {
+            console.log(index,item,'payrecive');
             var custlist = jQuery("<option>").val(item.id).text(item.firstname +'  '+ item.lastname);
             jQuery("#itr_pay_customer").append(custlist);
 
@@ -1197,7 +1198,7 @@
          complete: function(){
         setTimeout(function() {
           $("#processingdiv").css({'visibility':'hidden'});
-        }, 7000);
+        }, 6000);
       },
         error: function(errorThrown){
           console.log(errorThrown);
@@ -1331,3 +1332,28 @@
 
 
 
+
+  $(document).ready(function() {
+      $('.adcutomer').hide(200);
+      $('.estimate').hide(200);
+      $('.invoice').hide(200);
+      $('.recieve').hide(200);
+      $('.customerlist').hide(200);
+      $('.estimatelist').hide(200);
+      $('.invoicelist').hide(200);
+      $('.paymentlist').hide(200);
+      $('.overduelist').hide(200);
+
+    $('#mcustomerlist').click(function() {
+      console.log('customer');
+      $('.adcutomer').hide(200);
+      $('.estimate').hide(200);
+      $('.invoice').hide(200);
+      $('.recieve').hide(200);
+      $('.customerlist').show(200);
+      $('.estimatelist').hide(200);
+      $('.invoicelist').hide(200);
+      $('.paymentlist').hide(200);
+      $('.overduelist').hide(200);
+    });
+   });

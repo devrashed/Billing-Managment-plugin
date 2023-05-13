@@ -15,7 +15,7 @@ final class itr_invoicelist{
 
   ?>
 
-
+<div class="row"> 
   <h4>All Invoice List</h4> 
 
   <div class="row"> 
@@ -76,7 +76,13 @@ final class itr_invoicelist{
     </tbody>    
 
   </table>
-    
+
+</div>
+
+<div class="row copyright"> 
+<p>Built and maintained by <a href="https://itrtechsystems.com/">ITR Consulting</a> <strong>(www.itrtechsystems.com)</strong></p>
+
+</div>    
 
 <?php 
     }  

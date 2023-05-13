@@ -21,6 +21,8 @@ final class addcustomer {
       ?>
       <h5> Customer Information </h5>
 
+<div class="row"> 
+
       <form method="POST" action="">
       <div class="row">
 
@@ -126,79 +128,7 @@ final class addcustomer {
                      <input type="text" class="form-control" required="required" id="taxinfo" name="taxinfo" placeholder="Tax Info"></br> </div>
                   </div>    
 
-                  <!--<h5> Payment and Billing </h5>
 
-                   <div class="row">
-
-                     <div class="col-md-6"> 
-
-                       <div class="row">   
-
-                           <div class="col-md-6">
-                            <p>Preferred payment method </p>  
-                          
-                           <select class="form-select" name="payment" id="payment" required="required" aria-label="Default select example">
-                              <option selected>Payment Method</option>
-                              <option value="Cash">Cash</option>
-                              <option value="Cheque">Cheque</option>
-                              <option value="Credit Card">Credit Card</option>
-                              <option value="Direct Debit">Direct Debit</option>
-                           </select>    
-
-                          </br>   
-                         </div>
-
-                           <div class="col-md-6">  
-                            <p>Preferred delivery method </p>    
-                              
-                           <select class="form-select" id="dmethod" name="dmethod" required="required" aria-label="Default select example">
-                              <option selected>Delivery method</option>
-                              <option value="Print Later">Print Later</option>
-                              <option value="Send Later">Send Later</option>
-                              <option value="None">None</option>
-                           </select>    
-
-
-                           </br>   </div>               
-
-
-                        </div>   
-                        
-
-                     </div>   
-
-                      <div class="col-md-6">  
-
-                        <div class="row">
-
-                           <div class="col-md-4">
-                              <p>Terms </p>
-                          <select class="form-select" id="duerecipt" required="required" name="duerecipt" aria-label="Default select example">
-                              <option selected>Terms</option>
-                              <option value="Due on recipt">Due on recipt</option>
-                              <option value="Net 15">Net 15</option>
-                              <option value="Net 30">Net 30</option>
-                              <option value="Net 60">Net 60</option>
-                           </select>  
-
-                           </div>
-                           <div class="col-md-4"> 
-                              <p>Opening balance</p>
-                              <input type="text" class="form-control" required="required" name="balance" id="balance"> </br>  
-                            </div>  
-
-                           <div class="col-md-4"> 
-                                 
-                               <p>As of</p>
-                           <input type="date" class="form-control" name="cdate" required="required" id="cdate">  
-
-                           </div>
-                          
-                        </div>   
-
-                      </div>  
-
-                  </div> -->
 
            </div> <!-- END The ROW -->
 
@@ -208,6 +138,14 @@ final class addcustomer {
             <span id="valida_error_message" style="color:red;"></span>
          </div>
            <button type="button" id="customer" class="btn btn-primary">Submit</button>
+  </div>
+
+   <div class="row copyright"> 
+   <p>Built and maintained by <a href="https://itrtechsystems.com/">ITR Consulting</a> <strong>(www.itrtechsystems.com)</strong></p>
+
+   </div>       
+
+
 
       <?php 
         }  

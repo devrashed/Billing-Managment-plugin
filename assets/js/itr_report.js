@@ -15,6 +15,11 @@ let ajaxurl = ajax_obj.ajaxurl;
         jQuery('#show_data').DataTable({
            "info":     false,
             pagingType: 'full',
+            responsive: true,
+            searching: true,
+            autoWidth: true,
+            lengthChange: true,
+            iDisplayLength: 2,
             lengthMenu: [[5, 10], [5, 10]]
         });
     }); 
@@ -262,6 +267,243 @@ let ajaxurl = ajax_obj.ajaxurl;
         }
       }); 
     }); 
+
+
+/*==== Drawer Menu Icon  =======*/ 
+
+
+  jQuery(document).ready(function() {
+
+    $('#adcutomer').click(function() {
+      $('.adcutomer').show(200);
+      $('.estimate').hide(200);
+      $('.invoice').hide(200);
+      $('.itr_payrecieve').show(200);
+      $('.customerlist').hide(200);
+      $('.estimatelist').hide(200);
+      $('.invoicelist').hide(200);
+      $('.paymentlist').hide(200);
+      $('.overduelist').hide(200);
+     });
+
+    $('#mestimate').click(function() {
+
+      $('.adcutomer').hide(200);
+      $('.estimate').show(200);
+      $('.invoice').hide(200);
+      $('.itr_payrecieve').hide(200);
+      $('.customerlist').hide(200);
+      $('.estimatelist').hide(200);
+      $('.invoicelist').hide(200);
+      $('.paymentlist').hide(200);
+      $('.overduelist').hide(200);
+    });
+
+    $('#invoice').click(function() {
+
+      $('.adcutomer').hide(200);
+      $('.estimate').hide(200);
+      $('.invoice').show(200);
+      $('.itr_payrecieve').hide(200);
+      $('.customerlist').hide(200);
+      $('.estimatelist').hide(200);
+      $('.invoicelist').hide(200);
+      $('.paymentlist').hide(200);
+      $('.overduelist').hide(200);
+    });
+
+   //$('#mrecieve').click(function() {
+    $("#mrecieve").on("click", function() { 
+      console.log('sss');
+      $('.adcutomer').hide(200);
+      $('.estimate').hide(200);
+      $('.invoice').hide(200);
+      $('.itr_payrecieve').show();
+      $('.customerlist').hide(200);
+      $('.estimatelist').hide(200);
+      $('.invoicelist').hide(200);
+      $('.paymentlist').hide(200);
+      $('.overduelist').hide(200);
+    });
+});
+
+  /*$(document).ready(function() {
+      $('.adcutomer').hide(200);
+      $('.estimate').hide(200);
+      $('.invoice').hide(200);
+      $('.recieve').hide(200);
+      $('.customerlist').hide(200);
+      $('.estimatelist').hide(200);
+      $('.invoicelist').hide(200);
+      $('.paymentlist').hide(200);
+      $('.overduelist').hide(200);
+
+    $('#mcustomerlist').click(function() {
+      console.log('ddd');
+      $('.adcutomer').hide(200);
+      $('.estimate').hide(200);
+      $('.invoice').hide(200);
+      $('.recieve').hide(200);
+      $('.customerlist').show(200);
+      $('.estimatelist').hide(200);
+      $('.invoicelist').hide(200);
+      $('.paymentlist').hide(200);
+      $('.overduelist').hide(200);
+    });
+   });
+
+ $(document).ready(function() {
+      $('.adcutomer').hide(200);
+      $('.estimate').hide(200);
+      $('.invoice').hide(200);
+      $('.recieve').hide(200);
+      $('.customerlist').hide(200);
+      $('.estimatelist').hide(200);
+      $('.invoicelist').hide(200);
+      $('.paymentlist').hide(200);
+      $('.overduelist').hide(200);
+
+    $('#estimatelist').click(function() {
+
+      $('.adcutomer').hide(200);
+      $('.estimate').hide(200);
+      $('.invoice').hide(200);
+      $('.recieve').hide(200);
+      $('.customerlist').hide(200);
+      $('.estimatelist').show(200);
+      $('.invoicelist').hide(200);
+      $('.paymentlist').hide(200);
+      $('.overduelist').hide(200);
+    });
+   });
+
+  $(document).ready(function() {
+      $('.adcutomer').hide(200);
+      $('.estimate').hide(200);
+      $('.invoice').hide(200);
+      $('.recieve').hide(200);
+      $('.customerlist').hide(200);
+      $('.estimatelist').hide(200);
+      $('.invoicelist').hide(200);
+      $('.paymentlist').hide(200);
+      $('.overduelist').hide(200);
+
+    $('#invoicelist').click(function() {
+
+      $('.adcutomer').hide(200);
+      $('.estimate').hide(200);
+      $('.invoice').hide(200);
+      $('.recieve').hide(200);
+      $('.customerlist').hide(200);
+      $('.estimatelist').hide(200);
+      $('.invoicelist').show(200);
+      $('.paymentlist').hide(200);
+      $('.overduelist').hide(200);
+    });
+   });
+
+  $(document).ready(function() {
+      $('.adcutomer').hide(200);
+      $('.estimate').hide(200);
+      $('.invoice').hide(200);
+      $('.recieve').hide(200);
+      $('.customerlist').hide(200);
+      $('.estimatelist').hide(200);
+      $('.invoicelist').hide(200);
+      $('.paymentlist').show(200);
+      $('.overduelist').hide(200);
+
+    $('#paymentlist').click(function() {
+
+      $('.adcutomer').hide(200);
+      $('.estimate').hide(200);
+      $('.invoice').hide(200);
+      $('.recieve').hide(200);
+      $('.customerlist').hide(200);
+      $('.estimatelist').hide(200);
+      $('.invoicelist').hide(200);
+      $('.paymentlist').show(200);
+      $('.overduelist').hide(200);
+    });
+   });
+
+  $(document).ready(function() {
+      $('.adcutomer').hide(200);
+      $('.estimate').hide(200);
+      $('.invoice').hide(200);
+      $('.recieve').hide(200);
+      $('.customerlist').hide(200);
+      $('.estimatelist').hide(200);
+      $('.invoicelist').hide(200);
+      $('.paymentlist').hide(200);
+      $('.overduelist').hide(200);
+
+    $('#overduelist').click(function() {
+
+      $('.adcutomer').hide(200);
+      $('.estimate').hide(200);
+      $('.invoice').hide(200);
+      $('.recieve').hide(200);
+      $('.customerlist').hide(200);
+      $('.estimatelist').hide(200);
+      $('.invoicelist').hide(200);
+      $('.paymentlist').hide(200);
+      $('.overduelist').show(200);
+    });
+   });*/
+
+ /* ==== drawer menu ==== */
+
+
+$(document).ready(function() {
+    // show sidebar and overlay
+    function showSidebar() {
+        sidebar.css('margin-left', '0');
+
+        overlay.show(0, function() {
+            overlay.fadeTo('500', 0.5);
+        });   
+    }
+
+    // hide sidebar and overlay
+    function hideSidebar() {
+        sidebar.css('margin-left', sidebar.width() * -1 + 'px');
+
+        overlay.fadeTo('500', 0, function() {
+            overlay.hide();
+        });;
+    }
+
+    // selectors
+    var sidebar = $('[data-sidebar]');
+    var button = $('[data-sidebar-button]');
+    var overlay = $('[data-sidebar-overlay]');
+
+    // add height to content area
+    overlay.parent().css('min-height', 'inherit');
+
+    // hide sidebar on load
+    sidebar.css('margin-left', sidebar.width() * -1 + 'px');
+
+    sidebar.show(0, function() {
+        sidebar.css('transition', 'all 0.5s ease');
+    });
+
+    // toggle sidebar on click
+    button.click(function() {
+        if (overlay.is(':visible')) {
+            hideSidebar();
+        } else {
+            showSidebar();
+        }   
+        return false;
+    });
+
+    // hide sidebar on overlay click
+    overlay.click(function() {
+        hideSidebar();
+    });
+});
 
   /*==== Customer Delete =======*/   
 

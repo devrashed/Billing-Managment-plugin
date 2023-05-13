@@ -431,3 +431,142 @@ right: -2.5px !important;
     float: right;
 }
 
+
+
+/* ====== drawer menu ====== */
+.itr_drawer_icon{
+  float: left;
+  margin-left: -47px;
+  width:100%;
+}
+
+[data-sidebar] {
+    display: none;
+    position: fixed;
+    height: 100%;
+    z-index: 100;
+    left:-20px;
+}
+
+[data-sidebar-overlay] {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    width: 100%;
+    min-height: inherit;
+}
+/*#drawer_menu{
+  background-color: #ec3c2a; margin-left:-20px !important;
+}*/
+.adcutomer{
+ float: left;
+ width:100%;
+}
+.estimate{
+ float: left;
+ width:100%;
+}
+
+.invoice{
+ float: left;
+ width:100%;
+}
+
+.mrecieve{
+ float: left;
+ width:100%;
+}
+
+/*.customerlist{
+ float: left;
+ width:100%;
+}*/
+
+.estimatelist{
+ float: left;
+ width:100%;
+}
+
+.invoicelist{
+ float: left;
+ width:100%;
+}
+
+.paymentlist{
+ float: left;
+ width:100%;
+}
+
+.overduelist{
+ float: left;
+ width:100%;
+}
+
+/*aside {
+  background-color: #ec3c2a;
+  margin-left: -9px !important;
+}*/
+
+.itr_padding ul {
+padding:10px 15px; 
+margin-left: 10px;
+}
+
+.itr_padding ul li{
+  list-style: none;
+  padding: 3px 0px;
+}
+.itr_padding ul li a{
+  list-style: none;
+  text-decoration: none !important;
+  font-size: 17px;
+  color: #000;
+}
+
+.itr_padding ul li a:hover{
+  text-decoration:underline;
+}
+
+.fa-solid {
+font-weight: 900;
+font-size: 25px;
+}
+
+ /* ==== Mobile Responsive ==== */ 
+
+.itr_mobilevr { 
+display:none; 
+}
+
+@media only screen and (min-device-width: 320px) and (max-device-width:480px){
+
+  .itr_season_tabs{
+  display:none; 
+   }
+
+ .itr_mobilevr 
+  { 
+    display:block; 
+    width:100%;
+    float: left;
+  }
+}
+
+/* ==== End Mobile Responsive ==== */ 
+
+.copyright{
+position:absolute; 
+bottom:0%; 
+width:100%;
+}
+.copyright p{
+  text-align: center;
+}
+/*button*/
+
+#customer {
+    width: 100px;
+    float: left;
+}
